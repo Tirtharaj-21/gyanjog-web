@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useSpy } from "./motion/Motion";
 import { nav, img } from "../data/constants";
@@ -6,15 +7,20 @@ import { nav, img } from "../data/constants";
 function Header() {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
-  const active = useSpy(nav.map((n) => n[1]));
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+  // Section highlighting only makes sense on the Home page
+  const active = useSpy(isHome ? nav.map((n) => n[1]) : []);
+
   useEffect(() => {
     const f = () => setSolid(window.scrollY > 20);
     f();
     window.addEventListener("scroll", f, { passive: true });
     return () => window.removeEventListener("scroll", f);
   }, []);
+
   return (
-    <header className={`header${solid ? " solid" : ""}`}>
+    <header className={`header${solid || !isHome ? " solid" : ""}`}>
       <div className="strip">
         <div className="wrap">
           {/* Keep the top strip available for future contact details */}
@@ -34,9 +40,9 @@ function Header() {
       </div>
 
       <div className="wrap bar">
-        <a className="brand" href="#home">
+        <Link className="brand" to="/#home" onClick={() => setOpen(false)}>
           <img src={img("logo.png")} alt="Gyanjog Institute Logo" />
-        </a>
+        </Link>
 
         <button
           className="burger"
@@ -49,23 +55,23 @@ function Header() {
 
         <nav className={open ? "links open" : "links"}>
           {nav.map(([l, id]) => (
-            <a
+            <Link
               key={id}
               className={active === id ? "active" : undefined}
-              href={`#${id}`}
+              to={`/#${id}`}
               onClick={() => setOpen(false)}
             >
               {l}
-            </a>
+            </Link>
           ))}
 
-          <a
+          <Link
             className="btn btn-pink"
-            href="#contact"
+            to="/#contact"
             onClick={() => setOpen(false)}
           >
             Enquire now
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

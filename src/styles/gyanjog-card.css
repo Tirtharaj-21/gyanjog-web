@@ -1,0 +1,98 @@
+.gj-card {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 52px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #3a1250 0%, #5a1f6e 55%, #7a2a80 100%);
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 20px 44px rgba(58, 18, 80, 0.28);
+}
+
+/* soft decorative circle in the corner */
+.gj-card::after {
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  pointer-events: none;
+}
+
+.gj-card-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gj-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 0 16px;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.25;
+  color: #fff;
+}
+
+.gj-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 0 26px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.gj-card-tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gj-card-tags li {
+  margin: 0;
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* this row is what stops the button overlapping the pills */
+.gj-card-actions {
+  position: relative;
+  z-index: 1;
+  margin-top: 34px;
+}
+.gj-card-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .gj-card {
+    padding: 32px 22px;
+    border-radius: 22px;
+  }
+  .gj-card-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
