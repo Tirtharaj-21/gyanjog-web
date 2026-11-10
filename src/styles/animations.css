@@ -737,14 +737,14 @@
 .intro-content {
   position: relative;
   z-index: 1;
-  width: min(82vw, 340px);
+  width: min(86vw, 420px); /* slightly wider container */
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
 
-.intro-logo {
+/* .intro-logo {
   width: 76px;
   height: 76px;
   object-fit: contain;
@@ -753,8 +753,16 @@
   padding: 7px;
   box-shadow: 0 12px 42px #0005;
   animation: introPop .8s cubic-bezier(.2, .8, .2, 1) both;
+} */
+.intro-logo {
+  width: clamp(160px, 30vw, 240px); /* bigger logo, responsive */
+  height: auto;
+  padding: 0;               /* removes inner white space */
+  background: transparent;  /* removes the white box, if it came from CSS */
+  object-fit: contain;
+  border-radius: 28px;
+  margin-bottom: 16px;
 }
-
 .intro-name {
   margin: 18px 0 2px;
   color: #fff;
