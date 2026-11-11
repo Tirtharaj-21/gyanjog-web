@@ -721,7 +721,7 @@
 .intro-screen::after {
   content: "";
   position: absolute;
-  width: min(72vw, 560px);
+  width: min(92vw, 680px); 
   aspect-ratio: 1;
   border: 1px solid #ffffff18;
   border-radius: 50%;
@@ -729,7 +729,7 @@
 }
 
 .intro-screen::after {
-  width: min(55vw, 420px);
+  width: min(74vw, 540px);
   animation-direction: reverse;
   animation-duration: 11s;
 }
