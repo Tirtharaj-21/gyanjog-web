@@ -1175,3 +1175,213 @@
     justify-self: center;
   }
 }
+
+
+/* =========================================
+   QA FIX 02: MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 820px) {
+  /* Keep the header above page content */
+  .header {
+    z-index: 1000;
+  }
+
+  /* Make the mobile dropdown readable */
+  .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 12px 20px 20px;
+    background: #2b1040;
+    border-top: 1px solid #ffffff25;
+    box-shadow: 0 16px 30px #0003;
+
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  /* Show menu when hamburger is clicked */
+  .links.open {
+    display: flex;
+  }
+
+  /* Make menu links readable */
+  .links a:not(.btn) {
+    display: block;
+    padding: 14px 4px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff20;
+  }
+
+  .links a.active:not(.btn) {
+    color: #f4a623;
+  }
+
+  /* Enquiry button */
+  .links .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  /* Hamburger button */
+  .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .burger svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+  .brand img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .bar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .links {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+
+
+
+/* =========================================
+   QA FIX 03: ACTUAL HOMEPAGE BANNER
+========================================= */
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .mission-banner {
+    background-position: center center;
+  }
+
+  .mission-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(28, 10, 43, 0.94) 0%,
+      rgba(43, 16, 64, 0.88) 65%,
+      rgba(43, 16, 64, 0.72) 100%
+    );
+  }
+
+  .mission-content {
+    max-width: 760px;
+  }
+
+  .mission-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .mission-banner {
+    min-height: 0;
+    background-position: center center;
+  }
+
+  .mission-overlay {
+    min-height: 0;
+    padding: 110px 0 55px;
+    background: rgba(28, 10, 43, 0.86);
+  }
+
+  .mission-content {
+    width: min(100% - 36px, 560px);
+    max-width: 560px;
+    padding: 0;
+  }
+
+  .mission-label {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+  }
+
+  .mission-content h2 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    line-height: 1.16;
+    margin-bottom: 18px;
+    overflow-wrap: break-word;
+  }
+
+  .mission-content p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .mission-content .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .mission-content .actions .btn {
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 16px;
+    white-space: normal;
+  }
+
+  .mission-line {
+    margin-top: 24px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .mission-overlay {
+    padding-top: 100px;
+    padding-bottom: 42px;
+  }
+
+  .mission-content {
+    width: calc(100% - 28px);
+  }
+
+  .mission-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .mission-content p {
+    font-size: 0.93rem;
+  }
+
+  .mission-content .actions .btn {
+    font-size: 0.9rem;
+    padding-inline: 12px;
+  }
+}

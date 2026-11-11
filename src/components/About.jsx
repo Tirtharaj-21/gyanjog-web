@@ -3,13 +3,14 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "./motion/Motion";
 import { img } from "../data/constants";
 import "../styles/gyanjog-card.css";
+import ImageWithFallback from "./ImageWithFallback";
 
 function About() {
   return (
     <section className="section" id="about">
       <div className="wrap about">
         <Reveal className="about-img rv-wipe">
-          <img
+          <ImageWithFallback
             className="petal"
             src={img("mic.jpg")}
             alt="Chandan Chakraborty speaking at a seminar"

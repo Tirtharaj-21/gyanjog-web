@@ -12,10 +12,17 @@ import Reviews from "../components/Reviews";
 import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
 import Recognition from "../components/Recognition";
+import SEO from "../components/SEO";
 
 export default function Home() {
   return (
     <main>
+      <SEO
+        title="Gyanjog Group | Psychology, Counselling & Professional Training"
+        description="Discover psychology, counselling, mind-science and professional training programmes at Gyanjog Group. Explore our courses, faculty and educational initiatives."
+        path="/"
+        image="/assets/classroom.jpg"
+      />
       <Banner />
       <Highlights />
       <Trust />

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "../components/motion/Motion";
 import "../styles/gyanjog.css";
+import SEO from "../components/SEO";
 
 const trust = [
   {
@@ -114,6 +115,12 @@ const mission = [
 export default function GyanjogPage() {
   return (
     <main className="gj-page">
+      <SEO
+        title="About Gyanjog Group | Education, Psychology & Training"
+        description="Learn about Gyanjog Group, its educational mission, psychology programmes, counselling initiatives and professional skill development activities."
+        path="/about-gyanjog"
+        image="/assets/logo.png"
+      />
       <div className="gj-wrap">
         <Link to="/" className="gj-back">
           <ArrowLeft size={18} /> Back to Home

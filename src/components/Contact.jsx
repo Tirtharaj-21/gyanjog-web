@@ -30,15 +30,23 @@ function Contact() {
   const submit = (e) => {
     e.preventDefault();
 
+    const name = f.name.trim();
+    const email = f.email.trim();
+    const phone = f.phone.trim();
+    const course = f.course.trim();
+    const message = f.message.trim();
+
     const body = encodeURIComponent(
-      `Name: ${f.name}\nEmail: ${f.email}\nPhone: ${f.phone}\nCourse: ${f.course}\nMessage: ${f.message}`,
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCourse: ${course}\nMessage: ${message}`,
     );
 
-    window.location.href = `mailto:info@gyanjog.org?subject=${encodeURIComponent(
-      "Gyanjog Admission Enquiry",
-    )}&body=${body}`;
+    const subject = encodeURIComponent("Gyanjog Admission Enquiry");
+
+    const mailtoLink = `mailto:info@gyanjog.org?subject=${subject}&body=${body}`;
 
     setSent(true);
+
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -76,10 +84,11 @@ function Contact() {
 
             <form onSubmit={submit}>
               {sent && (
-                <p className="ok">
+                <p className="ok" role="status">
                   <Check size={16} />
-                  Your email app has opened. Press send there to finish your
-                  enquiry.
+                  Your email application should open. Please press Send to
+                  complete your enquiry. If it doesn't open, email
+                  info@gyanjog.org directly.
                 </p>
               )}
 
@@ -119,6 +128,11 @@ function Contact() {
                     value={f.phone}
                     onChange={up}
                     placeholder="e.g. +91 98765 43210"
+                    pattern="[+0-9() -]{7,20}"
+                    maxLength={20}
+                    inputMode="tel"
+                    autoComplete="tel"
+                    title="Enter a valid phone number using digits, spaces, +, - or parentheses"
                   />
                 </label>
 

@@ -12,6 +12,7 @@ import {
 import { Reveal } from "../components/motion/Motion";
 import { img } from "../data/constants";
 import "../styles/chairman.css";
+import SEO from "../components/SEO";
 
 const chips = [
   "RCI-Registered Clinical Psychologist",
@@ -54,6 +55,12 @@ const focus = [
 export default function ChairmanPage() {
   return (
     <main className="ch-page">
+      <SEO
+        title="Chandan Chakraborty | Founder & Chairman of Gyanjog"
+        description="Learn about Chandan Chakraborty, Gyanjog's Founder and Chairman, his work in clinical psychology, child psychology, counselling and psychological education."
+        path="/chairman"
+        image="/assets/mic.jpg"
+      />
       <div className="ch-wrap">
         <Link to="/" className="ch-back">
           <ArrowLeft size={18} /> Back to Home

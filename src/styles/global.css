@@ -3386,3 +3386,49 @@ textarea:focus {
     font-size: 1.2rem;
   }
 }
+
+
+/* =========================================
+   QA FIX 01: CONTACT FORM RESPONSIVENESS
+========================================= */
+
+/* Tablet and mobile */
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .contact-form-card {
+    padding: 22px;
+  }
+
+  .contact-form-card .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .contact-form-card input,
+  .contact-form-card select,
+  .contact-form-card textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .contact-form-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .contact-submit {
+    padding: 14px 12px;
+    font-size: 0.96rem;
+  }
+}

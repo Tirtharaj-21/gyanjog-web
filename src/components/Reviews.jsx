@@ -25,7 +25,7 @@ function Reviews() {
     ],
   ];
   return (
-    <section className="section reviews">
+    <section className="section reviews" id="reviews">
       <div className="wrap">
         <Heading
           title="What our learners say"
