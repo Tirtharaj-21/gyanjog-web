@@ -54,11 +54,30 @@ function Header() {
         </button>
 
         <nav className={open ? "links open" : "links"}>
-          {nav.map(([l, id]) => (
+          {/* {nav.map(([l, id]) => (
             <Link
               key={id}
               className={active === id ? "active" : undefined}
               to={`/#${id}`}
+              onClick={() => setOpen(false)}
+            >
+              {l}
+            </Link>
+          ))} */}
+
+          {nav.map(([l, id]) => (
+            <Link
+              key={id}
+              className={
+                id === "courses"
+                  ? pathname.startsWith("/courses") || active === id
+                    ? "active"
+                    : undefined
+                  : active === id
+                    ? "active"
+                    : undefined
+              }
+              to={id === "courses" ? "/courses" : `/#${id}`}
               onClick={() => setOpen(false)}
             >
               {l}

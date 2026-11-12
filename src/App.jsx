@@ -9,6 +9,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import ChairmanPage from "./pages/ChairmanPage";
 import GyanjogPage from "./pages/GyanjogPage";
+import GovernmentCoursesPage from "./pages/GovernmentCoursesPage";
+import ProfessionalCoursesPage from "./pages/ProfessionalCoursesPage";
+import CoursesPage from "./pages/CoursesPage";
 
 export default function App() {
   useGlow();
@@ -22,6 +25,13 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/chairman" element={<ChairmanPage />} />
         <Route path="/about-gyanjog" element={<GyanjogPage />} />
+        <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/courses/government" element={<GovernmentCoursesPage />} />
+
+        <Route
+          path="/courses/professional"
+          element={<ProfessionalCoursesPage />}
+        />
       </Routes>
       <Footer />
       <a

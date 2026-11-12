@@ -3,7 +3,6 @@ export const nav = [
   ["Home", "home"],
   ["About", "about"],
   ["Recognition", "recognition"],
-  ["Govt. Courses", "govt-courses"],
   ["Courses", "courses"],
   ["Videos", "videos"],
   ["Branches", "branches"],
