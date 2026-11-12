@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { Facebook, Youtube, MessageCircle } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { courses } from "../data/siteData";
 import { img } from "../data/constants";
 
@@ -30,21 +35,30 @@ function Footer() {
 
             <div className="footer-social">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/1J8ggqGevx/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
               >
-                <Facebook />
+                <FaFacebookF />
               </a>
 
               <a
-                href="https://www.youtube.com/"
+                href="https://www.instagram.com/gyanjog?cplk=MXd0MTVnY2ZsanQ0YQ=="
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://youtube.com/@chandanchakraborty5?si=L7Qfv9ztu49FQ9mU"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="YouTube"
               >
-                <Youtube />
+                <FaYoutube />
               </a>
 
               <a
@@ -53,7 +67,7 @@ function Footer() {
                 rel="noreferrer"
                 aria-label="WhatsApp"
               >
-                <MessageCircle />
+                <FaWhatsapp />
               </a>
             </div>
           </div>
