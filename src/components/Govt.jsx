@@ -1,8 +1,16 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight, GraduationCap } from "lucide-react";
 import { Reveal } from "./motion/Motion";
 import { govtCourses } from "../data/siteData";
 import Heading from "./Heading";
 
+function createSlug(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 function Govt() {
   return (
     <section className="section" id="govt-courses">
@@ -25,9 +33,18 @@ function Govt() {
               </ul>
               <div className="foot">
                 <small>{c.meta}</small>
-                <a href="#contact">
-                  Enquire <ArrowUpRight size={14} />
-                </a>
+                <div className="course-actions">
+                  <Link
+                    to={`/courses/government/${createSlug(c.title)}`}
+                    className="course-details-link"
+                  >
+                    View Details <ArrowUpRight size={14} />
+                  </Link>
+
+                  {/* <a href="#contact">
+                    Enquire <ArrowUpRight size={14} />
+                  </a> */}
+                </div>
               </div>
             </Reveal>
           ))}

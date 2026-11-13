@@ -16,10 +16,12 @@ export default function CoursesPage() {
 
       <section className="section courses-page">
         <div className="wrap">
-          <Heading
-            title="Explore Our Courses"
-            desc="Choose the right learning path to develop your knowledge, skills and professional career."
-          />
+          <div className="wrap">
+            <Heading
+              title="Explore Our Courses"
+              desc="Choose the right learning path to develop your knowledge, skills and professional career."
+            />
+          </div>
 
           <div className="course-category-grid">
             <Link

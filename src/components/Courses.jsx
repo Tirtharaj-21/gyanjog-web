@@ -1,45 +1,55 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Reveal } from "./motion/Motion";
 import { courses } from "../data/siteData";
 import Heading from "./Heading";
 
+const createSlug = (title) =>
+  title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
 function Courses() {
   return (
-    <section className="section tint" id="courses">
+    <section className="section tint" id="professional-courses">
       <div className="wrap">
         <Heading
-          title="Featured courses"
-          desc="Career-oriented programmes for psychologists, counsellors, teachers, parents and wellness practitioners."
+          title="Professional Courses"
+          desc="Explore professional training programmes in psychology, counselling, NLP and personal development."
         />
-        <ol className="course-list">
+
+        <div className="govt-grid">
           {courses.map((c, i) => (
-            <Reveal as="li" key={c.title} delay={i * 70}>
-              <div className="dur">
-                {c.tag.replace(
-                  / (Certificate|Diploma|Practitioner|Intensive Camp)$/,
-                  "",
-                )}
-                <small>{c.tag.split(" ").slice(2).join(" ")}</small>
-              </div>
-              <div className="cbody">
-                <h3>{c.title}</h3>
-                <p>{c.desc}</p>
-                <ul>
-                  {c.points.map((p) => (
-                    <li key={p}>{p}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="cmeta">
-                <span>{c.institute}</span>
-                <span>{c.mode}</span>
-                <a className="btn btn-line" href="#contact">
-                  Enquire <ArrowUpRight size={15} />
-                </a>
+            <Reveal as="article" key={c.title} delay={(i % 2) * 100} data-glow>
+              <span className="pill">{c.tag}</span>
+
+              <h3>{c.title}</h3>
+
+              <p className="sub">{c.institute}</p>
+
+              <p>{c.desc}</p>
+
+              <ul>
+                {c.points.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+
+              <div className="foot">
+                <small>{c.mode}</small>
+
+                <Link
+                  to={`/courses/professional/${c.slug || createSlug(c.title)}`}
+                >
+                  View Details
+                  <ArrowUpRight size={15} />
+                </Link>
               </div>
             </Reveal>
           ))}
-        </ol>
+        </div>
       </div>
     </section>
   );

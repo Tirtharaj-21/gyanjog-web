@@ -12,6 +12,8 @@ import GyanjogPage from "./pages/GyanjogPage";
 import GovernmentCoursesPage from "./pages/GovernmentCoursesPage";
 import ProfessionalCoursesPage from "./pages/ProfessionalCoursesPage";
 import CoursesPage from "./pages/CoursesPage";
+import GovernmentCourseDetailsPage from "./pages/GovernmentCourseDetailsPage";
+import ProfessionalCourseDetailsPage from "./pages/ProfessionalCourseDetailsPage";
 
 export default function App() {
   useGlow();
@@ -31,6 +33,15 @@ export default function App() {
         <Route
           path="/courses/professional"
           element={<ProfessionalCoursesPage />}
+        />
+
+        <Route
+          path="/courses/government/:courseSlug"
+          element={<GovernmentCourseDetailsPage />}
+        />
+        <Route
+          path="/courses/professional/:slug"
+          element={<ProfessionalCourseDetailsPage />}
         />
       </Routes>
       <Footer />

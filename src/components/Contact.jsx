@@ -321,7 +321,7 @@ function Contact() {
             </div>
 
             {/* Social Channels */}
-            <div className="official-social">
+            {/* <div className="official-social">
               <span>Connect on Official Channels:</span>
 
               <div>
@@ -352,7 +352,7 @@ function Contact() {
                   <MessageCircle />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
