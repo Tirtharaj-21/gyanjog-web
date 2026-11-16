@@ -30,7 +30,7 @@ function Footer() {
             </p>
 
             <p>
-              Email: <a href="mailto:info@gyanjog.org">info@gyanjog.org</a>
+              Email: <a href="mailto:admin@gyanjog.org">admin@gyanjog.org</a>
             </p>
 
             <div className="footer-social">

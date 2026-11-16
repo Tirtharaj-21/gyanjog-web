@@ -1,8 +1,8 @@
 export const governmentCourseDetails = [
   {
-    slug: "certified-child-counselor",
+    slug: "certified-child-counselor (Certified course )",
     title: "Certified Child Counselor",
-    institute: "Genius Mind Brain Development Academy",
+    // institute: "Genius Mind Brain Development Academy",
     duration: "3 Months",
     totalClasses: "10 Classes",
     classSchedule: "Every Saturday",

@@ -42,7 +42,7 @@ function Contact() {
 
     const subject = encodeURIComponent("Gyanjog Admission Enquiry");
 
-    const mailtoLink = `mailto:info@gyanjog.org?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:admin@gyanjog.org?subject=${subject}&body=${body}`;
 
     setSent(true);
 
@@ -88,7 +88,7 @@ function Contact() {
                   <Check size={16} />
                   Your email application should open. Please press Send to
                   complete your enquiry. If it doesn't open, email
-                  info@gyanjog.org directly.
+                  admin@gyanjog.org directly.
                 </p>
               )}
 
@@ -226,7 +226,7 @@ function Contact() {
                 </a>
 
                 <a
-                  href="mailto:info@gyanjog.org"
+                  href="mailto:admin@gyanjog.org"
                   className="office-contact-item"
                 >
                   <span className="detail-icon yellow-icon">
@@ -234,7 +234,7 @@ function Contact() {
                   </span>
                   <span>
                     <small>EMAIL ENQUIRIES</small>
-                    <strong>info@gyanjog.org</strong>
+                    <strong>admin@gyanjog.org</strong>
                   </span>
                 </a>
               </div>

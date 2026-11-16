@@ -30,19 +30,19 @@ export default function App() {
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/courses/government" element={<GovernmentCoursesPage />} />
 
-        <Route
+        {/* <Route
           path="/courses/professional"
           element={<ProfessionalCoursesPage />}
-        />
+        /> */}
 
         <Route
           path="/courses/government/:courseSlug"
           element={<GovernmentCourseDetailsPage />}
         />
-        <Route
+        {/* <Route
           path="/courses/professional/:slug"
           element={<ProfessionalCourseDetailsPage />}
-        />
+        /> */}
       </Routes>
       <Footer />
       <a

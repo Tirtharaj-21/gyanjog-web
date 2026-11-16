@@ -88,8 +88,8 @@ export const courses = [
 export const govtCourses = [
   {
     tag: "Govt. Recognised · 3 Months",
-    title: "Certified Child Counselor",
-    sub: "Genius Mind Brain Development Academy",
+    title: "Certified Child Counselor(Certified course )",
+    // sub: "Genius Mind Brain Development Academy",
     desc: "A child counselling programme covering child psychology, emotional development, behavioural adjustment, positive discipline, parenting and practical counselling techniques.",
     points: [
       "12 Course Modules",
@@ -103,7 +103,7 @@ export const govtCourses = [
 
   {
     tag: "Clinical Competency · 1 Year",
-    title: "Psychological Counselor and Therapist",
+    title: "Psychological Counselor and Therapist(PG Diploma)",
     sub: "Professional Therapeutic Qualification",
     desc: "Advanced learning for individuals seeking competency in psychological assessment, counselling approaches, and supervised practical work.",
     points: [
@@ -115,7 +115,7 @@ export const govtCourses = [
   },
   {
     tag: "Special Education Track · 1 Year",
-    title: "Counselor and Special Child Therapist",
+    title: "Counselor and Special Child Therapist(Diploma course)",
     sub: "Developmental & Inclusive Framework",
     desc: "Specialization in inclusive pedagogy, emotional guidance, and supportive approaches for children with diverse developmental needs.",
     points: [
@@ -165,23 +165,23 @@ export const branches = [
 ];
 
 export const faculty = [
-  ["Payel Biswas", "Trainer", "Coochbehar"],
-  ["Madhumita Sengupta", "Office Admin", "Kolkata"],
+  // ["Payel Biswas", "Trainer", "Coochbehar"],
+  // ["Madhumita Sengupta", "Office Admin", "Kolkata"],
   ["Nandita Banerjee", "Trainer", "Kolkata"],
   ["Priyanka Santra", "Trainer", "Howrah"],
   ["Papiya Roy", "Trainer", "East Medinipur"],
   ["Trishna Dhali", "Trainer", "Howrah"],
-  ["Mousumi Saha", "Relationship Officer", "Kolkata"],
+  // ["Mousumi Saha", "Relationship Officer", "Kolkata"],
   ["Pampa Banerjee", "Graphics Designer", "Kolkata"],
   ["Rahul Bera", "Graphics Designer", "West Medinipur"],
-  ["Swati Mukherjee", "Trainer", "Asansol"],
+  // ["Swati Mukherjee", "Trainer", "Asansol"],
   ["Piu Das", "Trainer", "Hooghly"],
   ["Jayasri Banerjee", "Relationship Officer", "Howrah"],
-  ["Samrat Banerjee", "Office Assistance", "Howrah"],
+  // ["Samrat Banerjee", "Office Assistance", "Howrah"],
   ["A K Azad Babu", "Business Head", "Dhaka, Bangladesh"],
   ["Sumina Akhter Jahan", "Relationship Manager", "Dhaka, Bangladesh"],
-  ["Ipsita Basu", "Relationship Officer", "Krishna Nagar"],
-  ["Rinki Hazra Ghosh", "Relationship Officer", "Siliguri"],
+  // ["Ipsita Basu", "Relationship Officer", "Krishna Nagar"],
+  // ["Rinki Hazra Ghosh", "Relationship Officer", "Siliguri"],
   ["Sanu Kotal", "Social Media Manager", "West Medinipur"],
 ];
 

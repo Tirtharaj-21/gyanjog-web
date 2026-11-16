@@ -17,7 +17,7 @@ function Govt() {
       <div className="wrap">
         <Heading
           title="Government recognised courses"
-          desc="Programmes certified by Genius Mind Brain Development Academy, with field exposure at our associate schools."
+          // desc="Programmes certified by Genius Mind Brain Development Academy, with field exposure at our associate schools."
         />
         <div className="govt-grid">
           {govtCourses.map((c, i) => (

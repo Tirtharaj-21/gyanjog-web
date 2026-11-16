@@ -71,23 +71,22 @@ function Team() {
                 className="faculty-photo"
                 src={`/assets/faculty/${
                   {
-                    "Payel Biswas": "payel-biswas.webp",
-                    "Madhumita Sengupta": "madhumita-sengupta.webp",
+                    // "Madhumita Sengupta": "madhumita-sengupta.webp",
                     "Nandita Banerjee": "nandita-banerjee.webp",
                     "Priyanka Santra": "priyanka-santra.webp",
                     "Papiya Roy": "papiya-roy.webp",
                     "Trishna Dhali": "trishna-dhali.webp",
-                    "Mousumi Saha": "mousumi-saha.webp",
+                    // "Mousumi Saha": "mousumi-saha.webp",
                     "Pampa Banerjee": "pampa-banerjee.webp",
                     "Rahul Bera": "rahul-bera.webp",
-                    "Swati Mukherjee": "swati-mukherjee.webp",
+                    // "Swati Mukherjee": "swati-mukherjee.webp",
                     "Piu Das": "piu-das.webp",
                     "Jayasri Banerjee": "jayasri-banerjee.webp",
-                    "Samrat Banerjee": "samrat-banerjee.webp",
+                    // "Samrat Banerjee": "samrat-banerjee.webp",
                     "A K Azad Babu": "ak-azad-babu.webp",
                     "Sumina Akhter Jahan": "sumina-akhter-jahan.webp",
-                    "Ipsita Basu": "ipsita-basu.webp",
-                    "Rinki Hazra Ghosh": "rinki-hazra-ghosh.webp",
+                    // "Ipsita Basu": "ipsita-basu.webp",
+                    // "Rinki Hazra Ghosh": "rinki-hazra-ghosh.webp",
                     "Sanu Kotal": "sanu-kotal.webp",
                   }[n]
                 }`}

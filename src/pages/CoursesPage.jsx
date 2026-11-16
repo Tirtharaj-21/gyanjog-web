@@ -47,15 +47,15 @@ export default function CoursesPage() {
               </span>
             </Link>
 
-            <Link
+            {/* <Link
               to="/courses/professional"
               className="course-category-card professional-card"
             >
               <div className="category-icon">
                 <BookOpen size={36} />
-              </div>
+              </div> */}
 
-              <span className="category-label">Gyanjog Programmes</span>
+            {/* <span className="category-label">Gyanjog Programmes</span>
 
               <h2>Professional Courses</h2>
 
@@ -67,8 +67,8 @@ export default function CoursesPage() {
               <span className="category-link">
                 Explore Professional Courses
                 <ArrowUpRight size={18} />
-              </span>
-            </Link>
+              </span> */}
+            {/* {/* </Link> */}
           </div>
         </div>
       </section>
