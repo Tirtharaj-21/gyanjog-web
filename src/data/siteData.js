@@ -200,6 +200,25 @@ export const gallery = [
 
 export const videos = [
   [
+    "hViEuViyevo",
+    "Personal Growth",
+    "The Journey Towards Self-Discovery",
+    "Explore the importance of self-awareness and personal development.",
+  ],
+  [
+    "SGq6pXuTu5o",
+    "Life Transformation",
+    "Transform Your Life Through Positive Thinking",
+    "Discover how positive thoughts and the right mindset can bring meaningful changes in life.",
+  ],
+  [
+    "ZVNVD_J7Eww",
+    "Spiritual Wisdom",
+    "Finding Inner Peace and Happiness",
+    "Learn the value of inner peace, self-awareness and a balanced life.",
+  ],
+
+  [
     "ED97EIu1GBE",
     "Child Psychology",
     "What is Child Psychology? Expert insights",
