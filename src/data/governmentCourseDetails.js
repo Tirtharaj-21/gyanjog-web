@@ -1,7 +1,7 @@
 export const governmentCourseDetails = [
   {
-    slug: "certified-child-counselor (Certified course )",
-    title: "Certified Child Counselor",
+    slug: "certified-child-counselor-certified-course",
+    title: "Certified Child Counselor (Certified course )",
     // institute: "Genius Mind Brain Development Academy",
     duration: "3 Months",
     totalClasses: "10 Classes",
@@ -141,7 +141,7 @@ export const governmentCourseDetails = [
   },
 
   {
-    slug: "psychological-counselor-and-therapist",
+    slug: "psychological-counselor-and-therapist-pg-diploma",
     title: "Psychological Counselor and Therapist",
     institute: "Gyanjog",
     duration: "12 Months",
@@ -268,7 +268,7 @@ export const governmentCourseDetails = [
   },
 
   {
-    slug: "counselor-and-special-child-therapist",
+    slug: "counselor-and-special-child-therapist-diploma-course",
     title: "Counselor and Special Child Therapist",
     institute: "Gyanjog",
     duration: "1 Year",
