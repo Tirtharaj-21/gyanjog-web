@@ -16,7 +16,7 @@ function Courses() {
     <section className="section tint" id="professional-courses">
       <div className="wrap">
         <Heading
-          title="Professional Courses"
+          title="Our Courses"
           desc="Explore professional training programmes in psychology, counselling, NLP and personal development."
         />
 

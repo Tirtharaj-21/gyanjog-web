@@ -3,7 +3,7 @@ import { Stats, Highlights } from "../components/motion/Motion";
 import Banner from "../components/Banner";
 import Trust from "../components/Trust";
 import About from "../components/About";
-import Courses from "../components/Courses";
+// import Courses from "../components/Courses";
 import Govt from "../components/Govt";
 import Videos from "../components/Videos";
 import Branches from "../components/Branches";
@@ -29,7 +29,7 @@ export default function Home() {
       <Recognition />
       <Stats />
       <About />
-      <Courses />
+      {/* <Courses /> */}
       <Govt />
       <Videos />
       <Branches />
