@@ -960,7 +960,7 @@
 
 /* ===== Gyanjog Institute Marquee ===== */
 
-.institute-marquee {
+/* .institute-marquee {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1036,8 +1036,52 @@
   .institute-marquee-track {
     animation: none;
   }
+} */
+
+.institute-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 32px;
+  width: 100%;
+  padding: 6px 8px;
+  background: linear-gradient(
+    90deg,
+    #2b1040,
+    #3f1a5c,
+    #a32474,
+    #3f1a5c,
+    #2b1040
+  );
+  border-top: 1px solid #f4a62355;
+  border-bottom: 1px solid #f4a62355;
 }
 
+.institute-strip span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.institute-strip span::before {
+  content: "✦";
+  color: #f4a623;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .institute-strip {
+    padding: 8px 12px;
+  }
+
+  .institute-strip span {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
 
 /* ===== Mission Banner ===== */
 
@@ -1384,4 +1428,402 @@
     font-size: 0.9rem;
     padding-inline: 12px;
   }
+}
+
+/* =========================================
+   HEADER
+   Palette: --plum / --plum2 (purple), --pink, --gold, white
+========================================= */
+
+.header {
+    --nav-white: #ffffff;
+    --nav-line: rgba(255, 255, 255, 0.16);
+    --nav-h: 96px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: var(--plum);
+    transition: box-shadow 0.3s ease;
+}
+
+.header.solid {
+    box-shadow: 0 8px 26px rgba(43, 16, 64, 0.35);
+}
+
+/* ---------- Announcement strip ---------- */
+
+.institute-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    min-height: 38px;
+    padding: 7px 16px;
+    background: var(--plum);
+    color: var(--nav-white);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--ff);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+}
+
+.institute-star {
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+/* ---------- Main navbar ---------- */
+
+.main-navbar {
+    position: relative;
+    width: 100%;
+    overflow-x: clip;
+    background: linear-gradient(90deg, var(--plum2), var(--plum));
+}
+
+/* pink to gold accent line */
+.main-navbar::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: auto 0 0 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--pink), var(--gold), var(--pink));
+}
+
+/* higher specificity than .wrap so its padding-top never applies here */
+.main-navbar .navbar-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: var(--nav-h);
+    padding-block: 0;
+}
+
+/* ---------- Brand block (white panel) ---------- */
+
+.navbar-brand {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 10px 34px 13px 0;
+    text-decoration: none;
+}
+
+.navbar-brand::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    right: 0;
+    /* background: var(--nav-white); */
+    /* border-right: 4px solid var(--gold); */
+}
+
+.navbar-brand img {
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* .brand-title {
+    color: var(--plum);
+    font-family: var(--fd);
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.05;  
+} */
+
+.brand-title {
+    color: #FFFFFF;
+    font-family: var(--fd);
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.brand-title .gold-letter {
+    color: var(--gold);
+}
+/* .brand-subtitle {
+    max-width: 190px;
+    color: var(--muted);
+    font-family: var(--ff);
+    font-size: 0.74rem;
+    font-weight: 500;
+    line-height: 1.35;
+} */
+
+.brand-subtitle {
+    max-width: 190px;
+    color: #FFFFFF;
+    font-family: var(--ff);
+    font-size: 0.74rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.1px;
+}
+/* ---------- Desktop navigation ---------- */
+
+.links {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: clamp(12px, 1.3vw, 20px);
+    min-width: 0;
+}
+
+.links a:not(.btn) {
+    position: relative;
+    padding: 10px 2px;
+    color: var(--nav-white);
+    font-family: var(--ff);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.links a:not(.btn)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.links a:not(.btn):hover,
+.links a.active {
+    color: var(--gold);
+}
+
+.links a:not(.btn):hover::after,
+.links a.active::after {
+    transform: scaleX(1);
+}
+
+/* ---------- Enquire Now button ---------- */
+
+.links a.nav-enquiry {
+    flex-shrink: 0;
+    margin-left: 6px;
+    padding: 12px 26px;
+    border: 2px solid var(--pink);
+    border-radius: 999px;
+    background: var(--pink);
+    color: var(--nav-white);
+    font-family: var(--ff);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    box-shadow: 0 6px 16px rgba(194, 51, 140, 0.4);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.links a.nav-enquiry:hover {
+    background: var(--pink-d);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(194, 51, 140, 0.55);
+}
+
+.links a.nav-enquiry:active {
+    transform: translateY(0);
+}
+
+/* ---------- Mobile menu button ---------- */
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid var(--nav-line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--nav-white);
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.burger:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: var(--gold);
+}
+
+.burger svg {
+    animation: burger-pop 0.25s ease;
+}
+
+@keyframes burger-pop {
+    from {
+        opacity: 0;
+        transform: rotate(-70deg) scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* ---------- Tablet and mobile ---------- */
+
+@media (max-width: 1180px) {
+    .header {
+        --nav-h: 84px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 101;
+        flex: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        align-self: auto;
+        gap: 0;
+        max-height: calc(100vh - 150px);
+        overflow-y: auto;
+        padding: 6px 24px 24px;
+        background: var(--plum);
+        border-bottom: 4px solid var(--gold);
+        box-shadow: 0 18px 30px rgba(43, 16, 64, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease,
+                    transform 0.3s ease,
+                    visibility 0s linear 0.3s;
+    }
+
+    .links.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        transition: opacity 0.3s ease,
+                    transform 0.3s ease,
+                    visibility 0s;
+    }
+
+    .links a:not(.btn) {
+        padding: 15px 4px;
+        border-bottom: 1px solid var(--nav-line);
+        font-size: 1.05rem;
+    }
+
+    .links a:not(.btn)::after {
+        display: none;
+    }
+
+    .links a.nav-enquiry {
+        margin: 20px 0 0;
+        padding: 14px 22px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .institute-strip {
+        gap: 2px 8px;
+        padding: 7px 12px;
+        font-size: 0.64rem;
+        letter-spacing: 0.7px;
+    }
+
+    .institute-star {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        --nav-h: 72px;
+    }
+
+    .main-navbar .navbar-container {
+        gap: 10px;
+    }
+
+    .navbar-brand {
+        gap: 9px;
+        padding-right: 22px;
+    }
+
+    .navbar-brand img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .brand-title {
+        font-size: 1.45rem;
+    }
+
+    .brand-subtitle {
+        max-width: 150px;
+        font-size: 0.6rem;
+    }
+
+    .burger {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header,
+    .links,
+    .links a,
+    .links a::after,
+    .links a.nav-enquiry,
+    .burger {
+        transition: none;
+    }
+
+    .burger svg {
+        animation: none;
+    }
 }

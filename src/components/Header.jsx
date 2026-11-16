@@ -7,91 +7,112 @@ import { nav, img } from "../data/constants";
 function Header() {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
+
   const { pathname } = useLocation();
   const isHome = pathname === "/";
-  // Section highlighting only makes sense on the Home page
   const active = useSpy(isHome ? nav.map((n) => n[1]) : []);
 
   useEffect(() => {
-    const f = () => setSolid(window.scrollY > 20);
-    f();
-    window.addEventListener("scroll", f, { passive: true });
-    return () => window.removeEventListener("scroll", f);
+    const handleScroll = () => setSolid(window.scrollY > 10);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
+  const isActive = (id) =>
+    id === "courses"
+      ? pathname.startsWith("/courses") || active === id
+      : active === id;
 
   return (
     <header className={`header${solid || !isHome ? " solid" : ""}`}>
-      <div className="strip">
-        <div className="wrap">
-          {/* Keep the top strip available for future contact details */}
-        </div>
+      {/* Announcement Bar */}
+      <div className="institute-strip">
+        <span className="institute-label">NSDC Affiliated Organization</span>
+        <span className="institute-dot" aria-hidden="true" />
+        <span className="institute-text">
+          Authorized Training Partner of National Skill Development Corporation,
+          Govt. of India
+        </span>
       </div>
 
-      {/* Institute Name Marquee */}
-      <div className="institute-marquee">
-        <div className="institute-marquee-track">
-          <span>NSDC AFFILIATED ORGANIZATION</span>
-          <span>GYANJOG INSTITUTE OF PSYCHOLOGY AND SPIRITUAL DEVELOPMENT</span>
-          <span aria-hidden="true">
-            <span>NSDC AFFILIATED ORGANIZATION</span>
-            GYANJOG INSTITUTE OF PSYCHOLOGY AND SPIRITUAL DEVELOPMENT
-          </span>
-        </div>
-      </div>
-
-      <div className="wrap bar">
-        <Link className="brand" to="/#home" onClick={() => setOpen(false)}>
-          <img src={img("logo.png")} alt="Gyanjog Institute Logo" />
-        </Link>
-
-        <button
-          className="burger"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          {open ? <X /> : <Menu />}
-        </button>
-
-        <nav className={open ? "links open" : "links"}>
-          {/* {nav.map(([l, id]) => (
-            <Link
-              key={id}
-              className={active === id ? "active" : undefined}
-              to={`/#${id}`}
-              onClick={() => setOpen(false)}
-            >
-              {l}
-            </Link>
-          ))} */}
-
-          {nav.map(([l, id]) => (
-            <Link
-              key={id}
-              className={
-                id === "courses"
-                  ? pathname.startsWith("/courses") || active === id
-                    ? "active"
-                    : undefined
-                  : active === id
-                    ? "active"
-                    : undefined
-              }
-              to={id === "courses" ? "/courses" : `/#${id}`}
-              onClick={() => setOpen(false)}
-            >
-              {l}
-            </Link>
-          ))}
-
+      {/* Main Navbar */}
+      <div className="main-navbar">
+        <div className="wrap navbar-container">
           <Link
-            className="btn btn-pink"
-            to="/#contact"
+            className="navbar-brand"
+            to="/#home"
             onClick={() => setOpen(false)}
+            aria-label="Gyanjog Home"
           >
-            Enquire now
+            <img src={img("logo.png")} alt="Gyanjog Institute Logo" />
+
+            {/* <div className="navbar-brand-text">
+              <span className="brand-title">Gyanjog</span>
+              <span className="brand-subtitle">
+                Institute of Psychology &amp; Spiritual Development
+              </span>
+            </div> */}
+            <div className="navbar-brand-text">
+              <span className="brand-title">
+                <span className="gold-letter">G</span>yan
+                <span className="gold-letter">j</span>o
+                <span className="gold-letter">g</span>
+              </span>
+
+              <span className="brand-subtitle">
+                Institute of Psychology &amp; Spiritual Development
+              </span>
+            </div>
           </Link>
-        </nav>
+
+          <button
+            className="burger"
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={open}
+            aria-controls="main-navigation"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          <nav id="main-navigation" className={`links${open ? " open" : ""}`}>
+            {nav.map(([label, id]) => (
+              <Link
+                key={id}
+                className={isActive(id) ? "active" : undefined}
+                aria-current={isActive(id) ? "page" : undefined}
+                to={id === "courses" ? "/courses" : `/#${id}`}
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
+
+            <Link
+              className="btn nav-enquiry"
+              to="/#contact"
+              onClick={() => setOpen(false)}
+            >
+              Enquire Now
+            </Link>
+          </nav>
+        </div>
       </div>
     </header>
   );

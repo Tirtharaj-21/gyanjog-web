@@ -23,6 +23,7 @@ export default function App() {
       <IntroAnimation />
       <Progress />
       <Header />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chairman" element={<ChairmanPage />} />
