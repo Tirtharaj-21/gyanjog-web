@@ -4944,3 +4944,50 @@ textarea:focus {
 #professional-courses .govt-grid article .foot a:hover {
     color: var(--plum);
 }
+.google-stars,
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #FBBC04 !important;
+}
+
+.google-stars svg,
+.review-stars svg {
+  color: #FBBC04 !important;
+  fill: #FBBC04 !important;
+}
+
+.google-brand {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.google-g {
+  font-family: Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+
+  background: conic-gradient(
+    from -45deg,
+    #4285F4 0deg 90deg,
+    #34A853 90deg 180deg,
+    #FBBC05 180deg 270deg,
+    #EA4335 270deg 360deg
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  flex-shrink: 0;
+}
+
+.google-brand-text {
+  font-size: 19px;
+  font-weight: 700;
+  color: #30203d;
+  letter-spacing: -0.3px;
+}
