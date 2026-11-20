@@ -430,11 +430,11 @@ export const gallery = [
     title: "Seminar Audience",
     note: "Students and participants attending an engaging educational seminar.",
   },
-  // {
-  //   image: "audience-participation.jpg",
-  //   title: "Audience Participation",
-  //   note: "Participants attending and engaging with an educational programme.",
-  // },
+  {
+    image: "panel.jpg",
+    title: "Panel",
+    note: "R. Bangla Shikshar Gourab panel",
+  },
   {
     image: "seminar-hall.jpg",
     title: "Seminar Hall",
@@ -470,16 +470,16 @@ export const gallery = [
     title: "Event Venue",
     note: "The event venue featuring seminar arrangements and promotional displays.",
   },
-  // {
-  //   image: "guest-speaker.jpg",
-  //   title: "Guest Speaker",
-  //   note: "A speaker sharing knowledge and insights with the audience.",
-  // },
-  // {
-  //   image: "child-psychology-session.jpg",
-  //   title: "Child Psychology Session",
-  //   note: "An expert delivering a presentation during a child psychology programme.",
-  // },
+  {
+    image: "classroom.jpg",
+    title: "Classroom",
+    note: "A school workshop with raised hands",
+  },
+  {
+    image: "prize.jpg",
+    title: "State honour",
+    note: "Shikshar Gourab Samman felicitation",
+  },
   {
     image: "award-ceremony.jpg",
     title: "Award Ceremony",
