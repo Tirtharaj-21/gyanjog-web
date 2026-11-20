@@ -1044,7 +1044,7 @@
   flex-wrap: wrap;
   gap: 4px 32px;
   width: 100%;
-  padding: 6px 8px;
+  /* padding: 6px 8px; */
   background: linear-gradient(
     90deg,
     #2b1040,

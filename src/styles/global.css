@@ -4991,3 +4991,592 @@ textarea:focus {
   color: #30203d;
   letter-spacing: -0.3px;
 }
+
+
+/* =========================================
+   GYANJOG BRAND COLORS
+========================================= */
+
+:root {
+  --brand-purple: #7028A0;
+  --brand-purple-dark: #542078;
+  --brand-purple-light: #F5EAFB;
+
+  --brand-pink: #E94B9B;
+  --brand-pink-light: #FCEAF3;
+
+  --brand-gold: #D6A52B;
+  --brand-gold-light: #FFF7DF;
+
+  --brand-white: #FFFFFF;
+
+  --text-primary: #30213D;
+  --text-secondary: #70677A;
+
+  --border-color: #EFE5F3;
+  --page-background: #FCFAFD;
+
+  --card-shadow: 0 8px 35px rgba(112, 40, 160, 0.09);
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.branch-details-page {
+  min-height: 70vh;
+  background: var(--page-background);
+  color: var(--text-primary);
+}
+
+.branch-details-container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.branch-details-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 55px 0 65px;
+
+  background: linear-gradient(
+    120deg,
+    var(--brand-purple-dark),
+    var(--brand-purple),
+    #9139AD
+  );
+
+  color: var(--brand-white);
+}
+
+.branch-details-hero::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  right: -100px;
+  top: -180px;
+  pointer-events: none;
+}
+
+.branch-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #F5DDFB;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-bottom: 35px;
+  transition: color 0.3s ease;
+}
+
+.branch-back-link:hover {
+  color: var(--brand-gold);
+}
+
+.branch-details-hero-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.branch-eyebrow {
+  display: inline-block;
+
+  color: var(--brand-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.branch-details-hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.branch-details-hero p {
+  max-width: 580px;
+
+  color: #F1E5F7;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.branch-code-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  color: var(--brand-white);
+  background: rgba(255, 255, 255, 0.10);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================
+   BRANCH DETAILS SECTION
+========================================= */
+
+.branch-details-section {
+  padding: 65px 0;
+}
+
+.branch-details-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+
+/* =========================================
+   HERO ADDRESS
+========================================= */
+
+.branch-hero-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   BRANCH HEAD PORTRAIT CARD
+========================================= */
+
+.branch-person-card {
+  position: sticky;
+  top: 100px; /* adjust to your navbar height */
+
+  padding: 16px 16px 22px;
+  text-align: center;
+
+  background: var(--brand-white);
+
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+
+  box-shadow: var(--card-shadow);
+}
+
+.branch-portrait-frame {
+  aspect-ratio: 4 / 5; /* same frame for every photo */
+
+  overflow: hidden;
+  border-radius: 14px;
+
+  background: var(--brand-purple-light);
+}
+
+.branch-portrait-img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top; /* keeps the face in frame */
+}
+
+.branch-portrait-fallback {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 64px;
+  font-weight: 800;
+
+  color: var(--brand-purple);
+}
+
+.branch-person-card h3 {
+  margin: 18px 0 8px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: var(--brand-purple-dark);
+}
+
+.branch-person-role {
+  display: inline-block;
+
+  padding: 5px 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: var(--brand-purple);
+  background: var(--brand-purple-light);
+
+  border-radius: 999px;
+}
+
+
+/* =========================================
+   BRANCH INFORMATION CARD
+========================================= */
+
+.branch-info-card {
+  padding: 32px;
+
+  background: var(--brand-white);
+
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+
+  box-shadow: var(--card-shadow);
+}
+
+.branch-info-label {
+  display: inline-block;
+
+  color: var(--brand-purple);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.branch-info-card h2 {
+  font-size: 30px;
+  font-weight: 800;
+
+  color: var(--brand-purple-dark);
+
+  margin: 10px 0 28px;
+}
+
+
+/* =========================================
+   INFORMATION ITEMS
+========================================= */
+
+.branch-info-item {
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.branch-info-icon {
+  min-width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--brand-purple);
+  background: var(--brand-purple-light);
+
+  border-radius: 10px;
+}
+
+.branch-info-item:nth-of-type(even) .branch-info-icon {
+  color: var(--brand-pink);
+  background: var(--brand-pink-light);
+}
+
+.branch-info-item span {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: var(--text-secondary);
+
+  margin-bottom: 6px;
+}
+
+.branch-info-item h3 {
+  font-size: 15px;
+  font-weight: 600;
+
+  color: var(--text-primary);
+
+  line-height: 1.6;
+  margin: 0;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.branch-contact-section {
+  border-top: 1px solid var(--border-color);
+
+  padding-top: 22px;
+  margin-top: 10px;
+}
+
+.branch-contact-section h3 {
+  font-size: 17px;
+  font-weight: 700;
+
+  color: var(--brand-purple-dark);
+
+  margin: 0 0 15px;
+}
+
+.branch-phone-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  color: var(--brand-purple);
+
+  text-decoration: none;
+  margin: 12px 0;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.branch-phone-link:hover {
+  color: var(--brand-pink);
+}
+
+
+/* =========================================
+   GOOGLE MAPS BUTTON
+========================================= */
+
+.branch-map-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 15px;
+
+  margin-top: 25px;
+
+  border-radius: 10px;
+
+  background: var(--brand-purple);
+  color: var(--brand-white);
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.branch-map-btn:hover {
+  background: var(--brand-pink);
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(233, 75, 155, 0.25);
+}
+
+
+/* =========================================
+   BRANCH NOT FOUND
+========================================= */
+
+.branch-not-found {
+  min-height: 65vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 30px 20px;
+
+  background: var(--page-background);
+}
+
+.branch-not-found svg {
+  color: var(--brand-purple);
+}
+
+.branch-not-found h1 {
+  color: var(--brand-purple-dark);
+  margin: 20px 0 5px;
+}
+
+.branch-not-found p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.branch-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 13px 20px;
+  margin-top: 20px;
+
+  border-radius: 8px;
+
+  background: var(--brand-purple);
+  color: var(--brand-white);
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: background 0.3s ease;
+}
+
+.branch-back-btn:hover {
+  background: var(--brand-pink);
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .branch-details-grid {
+    grid-template-columns: 280px 1fr;
+    gap: 22px;
+  }
+
+  .branch-info-card {
+    padding: 24px;
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .branch-details-hero {
+    padding: 40px 0;
+  }
+
+  .branch-details-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .branch-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-person-card {
+    position: static;
+
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .branch-info-card {
+    padding: 24px 20px;
+  }
+
+  .branch-details-section {
+    padding: 40px 0;
+  }
+
+  .branch-back-link {
+    margin-bottom: 25px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .branch-details-container {
+    width: 90%;
+  }
+
+  .branch-details-hero h1 {
+    font-size: 32px;
+  }
+
+  .branch-details-hero p {
+    font-size: 14px;
+  }
+
+  .branch-person-card {
+    max-width: 260px;
+    padding: 12px 12px 18px;
+    border-radius: 12px;
+  }
+
+  .branch-portrait-fallback {
+    font-size: 48px;
+  }
+
+  .branch-info-card {
+    padding: 22px 17px;
+    border-radius: 12px;
+  }
+
+  .branch-info-card h2 {
+    font-size: 25px;
+  }
+
+  .branch-info-item {
+    gap: 12px;
+  }
+
+  .branch-info-icon {
+    min-width: 38px;
+    height: 38px;
+  }
+
+  .branch-info-item h3 {
+    font-size: 14px;
+  }
+
+  .branch-code-badge {
+    font-size: 12px;
+    padding: 10px 13px;
+  }
+
+  .branch-map-btn {
+    font-size: 14px;
+    padding: 13px;
+  }
+}

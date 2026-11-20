@@ -4,12 +4,18 @@ import { gallery } from "../../data/siteData";
 import { useInView } from "./useInView";
 
 export function Highlights() {
-  const [i, setI] = useState(0),
-    [hold, setHold] = useState(false);
+  const [i, setI] = useState(0);
+  const [hold, setHold] = useState(false);
+
   const [ref, seen] = useInView({ threshold: 0.35 }, false);
-  const x0 = useRef(0),
-    n = gallery.length,
-    go = (k) => setI((k + n) % n);
+
+  const x0 = useRef(0);
+  const n = gallery.length;
+
+  const go = (k) => setI((k + n) % n);
+
+  if (!n) return null;
+
   return (
     <section
       className="hl"
@@ -28,49 +34,61 @@ export function Highlights() {
           onPointerDown={(e) => (x0.current = e.clientX)}
           onPointerUp={(e) => {
             const d = e.clientX - x0.current;
-            if (Math.abs(d) > 50) go(i + (d < 0 ? 1 : -1));
+
+            if (Math.abs(d) > 50) {
+              go(i + (d < 0 ? 1 : -1));
+            }
           }}
         >
-          {gallery.map(([f, , alt], k) => (
+          {gallery.map((item, k) => (
             <div
-              key={f}
+              key={item.image}
               className={k === i ? "sl on" : "sl"}
               aria-hidden={k !== i}
             >
               <img
-                src={`/assets/${f}`}
-                alt={alt}
-                loading={k ? "lazy" : "eager"}
+                src={`/images/seminar/${item.image}`}
+                alt={item.title}
+                loading={k === 0 ? "eager" : "lazy"}
               />
             </div>
           ))}
         </div>
+
         <div className="sl-bar">
           <span
             key={i}
             className="sl-prog"
-            style={{ animationPlayState: seen && !hold ? "running" : "paused" }}
+            style={{
+              animationPlayState: seen && !hold ? "running" : "paused",
+            }}
             onAnimationEnd={() => go(i + 1)}
           />
+
           <div className="sl-cap">
             <small>
-              <Award size={15} /> {gallery[i][1]}
+              <Award size={15} />
+              {gallery[i].title}
             </small>
-            <p>{gallery[i][2]}</p>
+
+            <p>{gallery[i].note}</p>
           </div>
+
           <div className="sl-ctl">
             <button onClick={() => go(i - 1)} aria-label="Previous slide">
               <ChevronLeft size={18} />
             </button>
-            {gallery.map(([f], k) => (
+
+            {gallery.map((item, k) => (
               <button
-                key={f}
+                key={item.image}
                 className={k === i ? "dot on" : "dot"}
                 onClick={() => go(k)}
                 aria-label={`Slide ${k + 1}`}
-                aria-current={k === i}
+                aria-current={k === i ? "true" : undefined}
               />
             ))}
+
             <button onClick={() => go(i + 1)} aria-label="Next slide">
               <ChevronRight size={18} />
             </button>

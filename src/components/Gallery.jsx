@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { gallery } from "../data/siteData";
-import { img } from "../data/constants";
 import Heading from "./Heading";
 
 function Gallery() {
@@ -21,9 +20,8 @@ function Gallery() {
   const firstRow = gallery.filter((_, i) => i % 2 === 0);
   const secondRow = gallery.filter((_, i) => i % 2 !== 0);
 
+  // Render gallery row
   const renderRow = (items, reverse = false) => {
-    const repeatedItems = [...items, ...items];
-
     return (
       <div className={`gallery-marquee-row ${reverse ? "reverse" : ""}`}>
         <div className="gallery-marquee-track">
@@ -33,26 +31,30 @@ function Gallery() {
               key={group}
               aria-hidden={group === 1}
             >
-              {items.map(([f, tag, alt], i) => (
+              {items.map((item, i) => (
                 <button
                   type="button"
                   className="gallery-marquee-card"
-                  key={`${group}-${f}-${i}`}
+                  key={`${group}-${item.image}`}
                   onClick={() =>
-                    setA(gallery.findIndex((item) => item[0] === f))
+                    setA(
+                      gallery.findIndex(
+                        (galleryItem) => galleryItem.image === item.image,
+                      ),
+                    )
                   }
                   tabIndex={group === 1 ? -1 : 0}
-                  aria-label={`Open photo: ${alt}`}
+                  aria-label={`Open photo: ${item.title}`}
                 >
                   <img
-                    src={img(f)}
-                    alt={group === 1 ? "" : alt}
+                    src={`/images/seminar/${item.image}`}
+                    alt={group === 1 ? "" : item.title}
                     loading="lazy"
                   />
 
                   <div className="gallery-marquee-caption">
-                    <span>{tag}</span>
-                    <p>{alt}</p>
+                    <span>{item.title}</span>
+                    <p>{item.note}</p>
                   </div>
                 </button>
               ))}
@@ -80,8 +82,8 @@ function Gallery() {
         {renderRow(secondRow, true)}
       </div>
 
-      {/* Existing Lightbox */}
-      {a !== null && (
+      {/* Lightbox */}
+      {a !== null && gallery[a] && (
         <div
           className="lightbox"
           role="dialog"
@@ -97,12 +99,12 @@ function Gallery() {
           </button>
 
           <img
-            src={img(gallery[a][0])}
-            alt={gallery[a][2]}
+            src={`/images/seminar/${gallery[a].image}`}
+            alt={gallery[a].title}
             onClick={(e) => e.stopPropagation()}
           />
 
-          <p>{gallery[a][2]}</p>
+          <p>{gallery[a].note}</p>
         </div>
       )}
     </section>

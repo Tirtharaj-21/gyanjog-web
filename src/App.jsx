@@ -14,6 +14,7 @@ import ProfessionalCoursesPage from "./pages/ProfessionalCoursesPage";
 import CoursesPage from "./pages/CoursesPage";
 import GovernmentCourseDetailsPage from "./pages/GovernmentCourseDetailsPage";
 import ProfessionalCourseDetailsPage from "./pages/ProfessionalCourseDetailsPage";
+import BranchDetailsPage from "./pages/BranchDetailsPage";
 
 export default function App() {
   useGlow();
@@ -40,6 +41,7 @@ export default function App() {
           path="/courses/government/:courseSlug"
           element={<GovernmentCourseDetailsPage />}
         />
+        <Route path="/branches/:slug" element={<BranchDetailsPage />} />
         {/* <Route
           path="/courses/professional/:slug"
           element={<ProfessionalCourseDetailsPage />}

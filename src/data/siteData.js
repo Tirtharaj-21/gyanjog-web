@@ -140,29 +140,245 @@ export const govtCourses = [
 ];
 
 export const branches = [
-  ["Bagnan", "Library More, Howrah · HQ", "Central Academy"],
-  ["Dum Dum", "Metro Corridor · Kolkata", "North Kolkata"],
-  ["Ranaghat", "Main Town · Nadia District", "Nadia Hub"],
-  ["Canning", "Sundarban Gateway", "South 24 Pgs"],
-  ["Shyambazar", "Five-Point Metro · Kolkata", "North Kolkata"],
-  ["Kalyani", "University Area · Nadia", "Nadia Hub"],
-  ["Burdwan", "Curzon Gate Area", "Purba Bardhaman"],
-  ["Garia", "Metro Corridor · Kolkata", "South Kolkata"],
-  ["Raiganj", "Uttar Dinajpur Hub", "North Bengal"],
-  ["Chakda", "Railway Corridor · Nadia", "Nadia Hub"],
-  ["Baguiati", "VIP Road · Kolkata", "North Kolkata"],
-  ["Sonarpur", "Suburban Hub · South 24 Pgs", "South 24 Pgs"],
-  ["Barasat", "District HQ Corridor", "North 24 Pgs"],
-  ["Santipur", "Heritage Town · Nadia", "Nadia Hub"],
-  ["Behala", "Diamond Harbour Road · Kolkata", "South Kolkata"],
-  ["Howrah", "Central Town · Howrah", "Howrah City"],
-  ["Jadavpur", "University Area · Kolkata", "South Kolkata"],
-  ["Central Avenue", "MG Road Metro · Kolkata", "Central Kolkata"],
-  ["Durgapur", "City Centre Hub", "Paschim Bardhaman"],
-  ["Sinthee", "BT Road · Kolkata", "North Kolkata"],
-  ["Berhampore", "District HQ · Central Bengal", "Murshidabad"],
-  ["Madhyamgram", "Jessore Road Corridor", "North 24 Pgs"],
+  {
+    slug: "bagnan",
+    name: "Bagnan",
+    head: "Moumita Biswas",
+    address:
+      "Bagnan, OT Road, Near Axis Bank (Landmark), Howrah, West Bengal, PIN - 711303",
+    phones: ["8918856448"],
+    branchCode: "GYAN/WB/558",
+    image: "/branches/bagnan.jpg",
+  },
+  {
+    slug: "dum-dum",
+    name: "Dum Dum",
+    head: "Priyatosh Kumar Mandal",
+    address:
+      "1st Floor, Fl No. 2A, 1A Roypara Bye Lane, Near Shib Kali Mandir, Kolkata, West Bengal, PIN - 700050",
+    phones: ["9635320370"],
+    branchCode: "GYAN/WB/556",
+    image: "/branches/dum-dum.jpg",
+  },
+  {
+    slug: "ranaghat",
+    name: "Ranaghat",
+    head: "Chaitali Mandal",
+    coordinator: "Ananta Kumar Mandal",
+    address:
+      "Ranaghat Dey Chowdhury Para, Ranaghat, Nadia, West Bengal, PIN - 741201",
+    phones: ["9732759153"],
+    branchCode: "GYAN/WB/557",
+    image: "/branches/ranaghat.jpg",
+  },
+  {
+    slug: "canning",
+    name: "Canning",
+    head: "Sudipa Halder",
+    address:
+      "Jaydebpally, Dighirpar, Canning Town, South 24 Pgns, West Bengal, PIN - 743329",
+    phones: ["7551800347"],
+    branchCode: "GYAN/WB/558",
+    image: "/branches/canning.jpg",
+  },
+  {
+    slug: "shyambazar",
+    name: "Shyambazar",
+    head: "Sampurna Majumder",
+    address:
+      "Block - C, Flat No. 5, 2, Ananda Chatterjee Lane, Near Manindra Chandra College, Baghbazar, West Bengal, PIN - 700003",
+    phones: ["8582830778"],
+    branchCode: "GYAN/WB/559",
+    image: "/branches/shyambazar.jpg",
+  },
+  {
+    slug: "kalyani",
+    name: "Kalyani",
+    head: "Saumen Das",
+    address: "A8/375 Kalyani, Nadia, West Bengal, PIN - 741235",
+    phones: ["9874033303"],
+    branchCode: "GYAN/WB/560",
+    image: "/branches/kalyani.jpg",
+  },
+  {
+    slug: "burdwan",
+    name: "Burdwan",
+    head: "Samir Chandra",
+    address:
+      "Narkel Bagan, Hrikesh Chatterjee Lane, Barddhaman, West Bengal, PIN - 713104",
+    phones: ["9153056582"],
+    branchCode: "GYAN/WB/562",
+    image: "/branches/burdwan.jpg",
+  },
+  {
+    slug: "garia",
+    name: "Garia",
+    head: "Salki Laha",
+    address:
+      "Garia, Pratapgarh, Purbapara, Laskarpur, Kolkata, West Bengal, PIN - 700153",
+    phones: ["7980145973"],
+    branchCode: "GYAN/WB/563",
+    image: "/branches/garia.jpg",
+  },
+  {
+    slug: "raiganj",
+    name: "Raiganj",
+    head: "Kaushik Bhattacherjee",
+    address: "Sudarshanpur, Raiganj, Uttar Dinajpur, West Bengal, PIN - 733134",
+    phones: ["9800535529"],
+    branchCode: "GYAN/WB/564",
+    image: "/branches/raiganj.jpg",
+  },
+  {
+    slug: "chakdaha",
+    name: "Chakdaha",
+    head: "Siraj Mondal",
+    address: "Chowgacha, P.S - Chakdaha, West Bengal, PIN - 741222",
+    phones: ["9091007708"],
+    branchCode: "GYAN/WB/565",
+    image: "/branches/chakdaha.jpg",
+  },
+  {
+    slug: "baguiati",
+    name: "Baguiati",
+    head: "Anindita Bhattacharya",
+    address:
+      "Baguiati, EB 4/4, Deshbandhu Nagar, Block B, Kolkata, West Bengal, PIN - 700059",
+    phones: ["9432070680"],
+    branchCode: "GYAN/WB/566",
+    image: "/branches/baguiati.jpg",
+  },
+  {
+    slug: "sonarpur",
+    name: "Sonarpur",
+    head: "Souvik Kumar Saha",
+    address:
+      "Swasti, Nowapara Sonarpur Baishali Road, Kolkata, West Bengal, PIN - 700150 (Nearest Landmark: Nabajagaran Sangha)",
+    phones: ["9432190256"],
+    branchCode: "GYAN/WB/568",
+    image: "/branches/sonarpur.jpg",
+  },
+  {
+    slug: "barasat",
+    name: "Barasat",
+    head: "Priti Saha",
+    address:
+      "Nabapally Housing Complex, Phase 2, Flat no - G/H, Nabapally, Colony More, Barasat, 24 Pgs (N), West Bengal, PIN - 700126",
+    phones: ["9932858161", "9051741711"],
+    branchCode: "GYAN/WB/567",
+    image: "/branches/barasat.jpg",
+  },
+  {
+    slug: "santipur",
+    name: "Santipur",
+    head: "Ipsita Basu",
+    address:
+      "Baro Goswami Para, P.O - Santipur, Nadia, West Bengal, PIN - 741404",
+    phones: ["9064675264"],
+    branchCode: "GYAN/WB/571",
+    image: "/branches/santipur.png",
+  },
+  {
+    slug: "behala",
+    name: "Behala",
+    head: "Susmita Chowdhury",
+    address: "10/1 Dr AK Pal Road, Behala, Kolkata, West Bengal, PIN - 700034",
+    phones: ["7596833307"],
+    branchCode: "GYAN/WB/569",
+    image: "/branches/behala.png",
+  },
+  {
+    slug: "howrah",
+    name: "Howrah",
+    head: "Tapasi Roy, Rani Jati",
+    coordinator: "Trishna Dhali",
+    address:
+      "3/1/1 Nanda Mukherjee Lane, Kadamtala, Howrah, West Bengal, PIN - 711101",
+    phones: ["6290205614"],
+    branchCode: "GYAN/WB/573",
+    image: "/branches/howrah.png",
+  },
+  {
+    slug: "jadavpur",
+    name: "Jadavpur",
+    head: "Dr. Susmita Pal",
+    address: "7 Solok Pally, Haltu, Kolkata, West Bengal, PIN - 700078",
+    phones: ["7605876876"],
+    branchCode: "GYAN/WB/571",
+    image: "/branches/jadavpur.jpg",
+  },
+  {
+    slug: "central-avenue",
+    name: "Central Avenue",
+    head: "Bijoylakshmi Koley",
+    address:
+      "251 Rabindra Sarani (Near Jorasanko Thakurbari), Kolkata, West Bengal, PIN - 700007",
+    phones: ["9830843429"],
+    branchCode: "GYAN/WB/574",
+    image: "/branches/central-avenue.jpg",
+  },
+  {
+    slug: "durgapur",
+    name: "Durgapur",
+    head: "Tanima Kar",
+    address:
+      "5/7 SEPCO Township, B-Zone, Durgapur, Paschim Bardhaman, West Bengal, PIN - 713205",
+    phones: ["9749471973"],
+    branchCode: "GYAN/WB/575",
+    image: "/branches/durgapur.jpg",
+  },
+  {
+    slug: "sinthee",
+    name: "Sinthee",
+    head: "Mukul Sen",
+    address: "15/2 Centre Sinthee Road, Kolkata, West Bengal, PIN - 700050",
+    phones: ["9830010227"],
+    branchCode: "GYAN/WB/576",
+    image: "/branches/sinthee.jpg",
+  },
+  {
+    slug: "berhampore",
+    name: "Berhampore",
+    head: "Bikash Chandra Saha",
+    address:
+      "15/A/1 Babul Bona Road, PO & PS - Berhampore, District - Murshidabad, West Bengal, PIN - 742101",
+    phones: ["8250508905"],
+    branchCode: "GYAN/WB/577",
+    image: "/branches/berhampore.jpg",
+  },
+  {
+    slug: "madhyamgram",
+    name: "Madhyamgram",
+    head: "Sanjukta Choudhury",
+    address:
+      "Hormaz Villa, Plot No - 6, Basunagar, Madhyamgram, West Bengal, PIN - 700129",
+    phones: ["7003478525"],
+    branchCode: "GYAN/WB/578",
+    image: "/branches/madhyamgram.jpg",
+  },
+  {
+    slug: "santiniketan",
+    name: "Santiniketan",
+    head: "Sanjib Thander",
+    address: "Ratanpally, Santiniketan, Bolpur, Birbhum, West Bengal",
+    phones: ["8972725995"],
+    branchCode: "GYAN/WB/579",
+    image: "/branches/santiniketan.jpg",
+  },
+  {
+    slug: "bongaon",
+    name: "Bongaon",
+    head: "Shreya Kundu",
+    address: "Bongaon, Baduria, North 24 Parganas, West Bengal",
+    phones: ["8597226566"],
+    branchCode: "GYAN/WB/580",
+    image: "/branches/bongaon.jpg",
+  },
 ];
+
+export const getBranchBySlug = (slug) => {
+  return branches.find((branch) => branch.slug === slug);
+};
 
 export const faculty = [
   // ["Payel Biswas", "Trainer", "Coochbehar"],
@@ -185,17 +401,120 @@ export const faculty = [
   ["Sanu Kotal", "Social Media Manager", "West Medinipur"],
 ];
 
+// export const gallery = [
+//   [
+//     "audience.jpg",
+//     "School assembly",
+//     "Students at an interactive school assembly",
+//   ],
+//   ["lecture.jpg", "Keynote", "Chairman addressing a packed auditorium"],
+//   ["prize.jpg", "State honour", "Shikshar Gourab Samman felicitation"],
+//   ["classroom.jpg", "Classroom", "A school workshop with raised hands"],
+//   ["panel.jpg", "Panel", "R. Bangla Shikshar Gourab panel"],
+//   ["mic.jpg", "Seminar", "Chairman speaking at a seminar"],
+// ];
+
 export const gallery = [
-  [
-    "audience.jpg",
-    "School assembly",
-    "Students at an interactive school assembly",
-  ],
-  ["lecture.jpg", "Keynote", "Chairman addressing a packed auditorium"],
-  ["prize.jpg", "State honour", "Shikshar Gourab Samman felicitation"],
-  ["classroom.jpg", "Classroom", "A school workshop with raised hands"],
-  ["panel.jpg", "Panel", "R. Bangla Shikshar Gourab panel"],
-  ["mic.jpg", "Seminar", "Chairman speaking at a seminar"],
+  {
+    image: "seminar-gathering.jpg",
+    title: "Seminar Gathering",
+    note: "Participants gathered together for an educational seminar and interactive programme.",
+  },
+  {
+    image: "event-attendees.jpg",
+    title: "Event Attendees",
+    note: "A group of attendees coming together to participate in an educational event.",
+  },
+  {
+    image: "educational-seminar-audience.jpg",
+    title: "Seminar Audience",
+    note: "Students and participants attending an engaging educational seminar.",
+  },
+  // {
+  //   image: "audience-participation.jpg",
+  //   title: "Audience Participation",
+  //   note: "Participants attending and engaging with an educational programme.",
+  // },
+  {
+    image: "seminar-hall.jpg",
+    title: "Seminar Hall",
+    note: "A view of the audience gathered inside the seminar hall.",
+  },
+  {
+    image: "certificate-awardees.jpg",
+    title: "Certificate Recognition",
+    note: "Award recipients proudly displaying their certificates of achievement.",
+  },
+  {
+    image: "faculty-meeting.jpg",
+    title: "Faculty Gathering",
+    note: "Faculty members sharing a moment during an organisational gathering.",
+  },
+  {
+    image: "guest-felicitation.jpg",
+    title: "Guest Felicitation",
+    note: "A guest being honoured during a special felicitation ceremony.",
+  },
+  {
+    image: "special-recognition.jpg",
+    title: "Special Recognition",
+    note: "A memorable moment of appreciation and recognition for a guest.",
+  },
+  {
+    image: "guest-appreciation.jpg",
+    title: "Guest Appreciation",
+    note: "A guest receiving a token of appreciation during the programme.",
+  },
+  {
+    image: "event-venue.jpg",
+    title: "Event Venue",
+    note: "The event venue featuring seminar arrangements and promotional displays.",
+  },
+  // {
+  //   image: "guest-speaker.jpg",
+  //   title: "Guest Speaker",
+  //   note: "A speaker sharing knowledge and insights with the audience.",
+  // },
+  // {
+  //   image: "child-psychology-session.jpg",
+  //   title: "Child Psychology Session",
+  //   note: "An expert delivering a presentation during a child psychology programme.",
+  // },
+  {
+    image: "award-ceremony.jpg",
+    title: "Award Ceremony",
+    note: "Participants receiving recognition during an award ceremony.",
+  },
+  {
+    image: "group-felicitation.jpg",
+    title: "Group Felicitation",
+    note: "A group celebrating a special moment of appreciation and recognition.",
+  },
+  {
+    image: "traditional-welcome.jpg",
+    title: "Traditional Welcome",
+    note: "A traditional gesture of respect and welcome during the event.",
+  },
+  {
+    image: "speaker-presentation.jpg",
+    title: "Speaker Presentation",
+    note: "A speaker presenting ideas and sharing knowledge at the programme.",
+  },
+  {
+    image: "stage-address.jpg",
+    title: "Stage Address",
+    note: "An invited speaker addressing participants during an educational event.",
+  },
+  {
+    image: "training-session-audience.jpg",
+    title: "Training Session",
+    note: "Participants attending a focused training and learning session.",
+  },
+  {
+    image: "group-photograph.jpg",
+    title: "Group Photograph",
+    note: "A group photograph capturing participants and guests at the event.",
+  },
 ];
 
 export const videos = [
